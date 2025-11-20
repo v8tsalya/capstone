@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Health Hub - Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Basic Health Hub</h1>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <h2>Request an Appointment or Inquiry</h2>
+        
+        <form action="#" method="POST" class="contact-form">
+            
+            <fieldset>
+                <legend>Your Details</legend>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="emailAddress" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phoneNumber">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Inquiry Details</legend>
+                <div class="form-group">
+                    <label for="type">Inquiry Type:</label>
+                    <select id="type" name="inquiryType" required>
+                        <option value="appointment">Appointment Request</option>
+                        <option value="general">General Question</option>
+                        <option value="billing">Billing/Insurance</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="userMessage" rows="4"></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="button submit-button">Submit Request</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Basic Health Hub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
