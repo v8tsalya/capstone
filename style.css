@@ -182,23 +182,9 @@ footer {
 }
 
 
-@media (max-width: 768px) {
-    
-    .main-header {
-        flex-direction: column; 
-    }
 
-    .main-nav {
-        margin-top: 1rem;
-        width: 100%;
-        justify-content: space-around;
-    }
-    
-    .main-layout {
-        grid-template-columns: 1fr;
-    }
     
     .sidebar {
         order: 2; 
     }
-}
+
