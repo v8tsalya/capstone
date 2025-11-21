@@ -202,33 +202,3 @@ footer {
         order: 2; 
     }
 }
-
-/* --- Loading Screen Styles --- */
-#loading-overlay {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.spinner {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #2962FF; /* Matches your brand blue */
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-    margin-bottom: 15px;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
