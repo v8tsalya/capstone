@@ -1,77 +1,36 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HealthHub — Services</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <title>Services - HealthHub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">HealthHub</a>
-      <nav class="nav">
+
+<header>
+    <h1>HealthHub</h1>
+    <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="doctors.html">Doctors</a>
         <a href="faq.html">FAQ</a>
-        <a href="contact.html" class="cta">Contact</a>
-      </nav>
-      <button class="mobile-toggle" aria-label="toggle menu">☰</button>
-    </div>
-  </header>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-  <main class="container">
-    <section class="page">
-      <h1>Services</h1>
-      <div class="grid services-grid">
-        <div class="service">
-          <h3>General Consultation</h3>
-          <p>Short explanation you can describe in viva: includes check-ups and basic diagnosis.</p>
-        </div>
-        <div class="service">
-          <h3>Diagnostics</h3>
-          <p>Quick tests and labs with results summary page links.</p>
-        </div>
-        <div class="service">
-          <h3>Emergency Care</h3>
-          <p>What to do in emergencies and local emergency numbers.</p>
-        </div>
-        <div class="service">
-          <h3>Telehealth Tips</h3>
-          <p>How to prepare for online consultations and what details to share.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+<div class="main-section container">
+    <h2>Our Services</h2>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>HealthHub</h4>
-        <p>Simple. Clear. Caring.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>email@healthhub.example</p>
-      </div>
-    </div>
-    <div class="copyright">© HealthHub 2025</div>
-  </footer>
+    <div class="card"><p>General Checkups</p></div>
+    <div class="card"><p>Online Consultations</p></div>
+    <div class="card"><p>Health Insurance Guidance</p></div>
+    <div class="card"><p>Mental Health Support</p></div>
 
-  <script>
-    const btn = document.querySelector('.mobile-toggle');
-    const nav = document.querySelector('.nav');
-    btn.addEventListener('click', ()=> nav.classList.toggle('open'));
-  </script>
+</div>
+
+<footer>
+    © 2025 HealthHub
+</footer>
+
 </body>
 </html>

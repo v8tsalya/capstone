@@ -1,101 +1,32 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HealthHub — Home</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <title>HealthHub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">HealthHub</a>
-      <nav class="nav">
+
+<header>
+    <h1>HealthHub</h1>
+    <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="doctors.html">Doctors</a>
         <a href="faq.html">FAQ</a>
-        <a href="contact.html" class="cta">Contact</a>
-      </nav>
-      <button class="mobile-toggle" aria-label="toggle menu">☰</button>
-    </div>
-  </header>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Welcome to HealthHub</h1>
-          <p>Your trusted place for simple, clear healthcare information and local resources.</p>
-          <div class="hero-actions">
-            <a class="btn" href="services.html">Explore Services</a>
-            <a class="btn ghost" href="doctors.html">Find Doctors</a>
-          </div>
-        </div>
-        <div class="hero-card">
-          <h3>Quick Health Check</h3>
-          <ul>
-            <li>Symptoms guide</li>
-            <li>Appointment tips</li>
-            <li>Emergency contacts</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<div class="main-section">
+    <h2>Welcome to HealthHub</h2>
+    <p>Your simple and reliable healthcare partner.</p>
+    <a class="btn" href="services.html">View Services</a>
+</div>
 
-    <section class="features container">
-      <h2>Features</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Local Clinics</h3>
-          <p>Browse clinics nearby with hours and contact details.</p>
-        </article>
-        <article class="card">
-          <h3>Services</h3>
-          <p>See a concise list of common healthcare services offered.</p>
-        </article>
-        <article class="card">
-          <h3>Trusted Doctors</h3>
-          <p>Profiles of doctors with specialization and brief bios.</p>
-        </article>
-      </div>
-    </section>
+<footer>
+    © 2025 HealthHub
+</footer>
 
-    <section class="callout">
-      <div class="container">
-        <h2>Preparing for your visit</h2>
-        <p>Bring ID, list of medications, and note down questions for your doctor.</p>
-        <a class="btn" href="contact.html">Make a note</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>HealthHub</h4>
-        <p>Simple. Clear. Caring.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>email@healthhub.example</p>
-      </div>
-    </div>
-    <div class="copyright">© HealthHub 2025</div>
-  </footer>
-  <script>
-    const btn = document.querySelector('.mobile-toggle');
-    const nav = document.querySelector('.nav');
-    btn.addEventListener('click', ()=> nav.classList.toggle('open'));
-  </script>
 </body>
 </html>

@@ -1,66 +1,33 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HealthHub — About</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <title>About - HealthHub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">HealthHub</a>
-      <nav class="nav">
+
+<header>
+    <h1>HealthHub</h1>
+    <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="doctors.html">Doctors</a>
         <a href="faq.html">FAQ</a>
-        <a href="contact.html" class="cta">Contact</a>
-      </nav>
-      <button class="mobile-toggle" aria-label="toggle menu">☰</button>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="main-section container">
+    <h2>About Us</h2>
+    <div class="card">
+        <p>HealthHub is a simple healthcare website created to help users access basic health information easily.</p>
     </div>
-  </header>
+</div>
 
-  <main class="container">
-    <section class="page">
-      <h1>About HealthHub</h1>
-      <p>HealthHub is a student project built to demonstrate clean HTML and CSS. The design is intentionally simple and accessible with a dark theme.</p>
-      <h2>Objectives</h2>
-      <ul>
-        <li>Practice semantic HTML</li>
-        <li>Create responsive layouts with CSS</li>
-        <li>Build a small multi-page site</li>
-      </ul>
-    </section>
-  </main>
+<footer>
+    © 2025 HealthHub
+</footer>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>HealthHub</h4>
-        <p>Simple. Clear. Caring.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>email@healthhub.example</p>
-      </div>
-    </div>
-    <div class="copyright">© HealthHub 2025</div>
-  </footer>
-
-  <script>
-    const btn = document.querySelector('.mobile-toggle');
-    const nav = document.querySelector('.nav');
-    btn.addEventListener('click', ()=> nav.classList.toggle('open'));
-  </script>
 </body>
 </html>

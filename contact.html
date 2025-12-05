@@ -1,83 +1,38 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HealthHub — Contact</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <title>Contact - HealthHub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">HealthHub</a>
-      <nav class="nav">
+
+<header>
+    <h1>HealthHub</h1>
+    <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="doctors.html">Doctors</a>
         <a href="faq.html">FAQ</a>
-        <a href="contact.html" class="cta">Contact</a>
-      </nav>
-      <button class="mobile-toggle" aria-label="toggle menu">☰</button>
-    </div>
-  </header>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-  <main class="container">
-    <section class="page contact-page">
-      <h1>Contact</h1>
-      <p>If this were a production site the contact form would POST to a backend. For the project you can explain this is a placeholder contact layout.</p>
-      <div class="contact-grid">
-        <form class="contact-form">
-          <label>
-            Name
-            <input type="text" placeholder="Your name">
-          </label>
-          <label>
-            Email
-            <input type="email" placeholder="you@example.com">
-          </label>
-          <label>
-            Message
-            <textarea rows="5" placeholder="Describe your issue or question"></textarea>
-          </label>
-          <button class="btn" type="button">Send (placeholder)</button>
-        </form>
-        <div class="contact-info">
-          <h3>Office</h3>
-          <p>123 HealthHub Lane</p>
-          <p>Mon - Sat: 9:00 - 18:00</p>
-          <p>Phone: 0123-456-789</p>
-        </div>
-      </div>
-    </section>
-  </main>
+<div class="main-section container">
+    <h2>Contact Us</h2>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>HealthHub</h4>
-        <p>Simple. Clear. Caring.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>email@healthhub.example</p>
-      </div>
-    </div>
-    <div class="copyright">© HealthHub 2025</div>
-  </footer>
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
 
-  <script>
-    const btn = document.querySelector('.mobile-toggle');
-    const nav = document.querySelector('.nav');
-    btn.addEventListener('click', ()=> nav.classList.toggle('open'));
-  </script>
+</div>
+
+<footer>
+    © 2025 HealthHub
+</footer>
+
 </body>
 </html>
