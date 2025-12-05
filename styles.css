@@ -1,99 +1,74 @@
 body {
     margin: 0;
-    padding: 0;
-    background: #0d0d0d;
     font-family: Arial, sans-serif;
-    color: white;
+    background: #000;
+    color: #fff;
 }
 
 header {
-    background: #1a1a1a;
     padding: 20px;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-nav {
-    margin-top: 10px;
+    background: #111;
+    border-bottom: 2px solid #333;
 }
 
 nav a {
-    margin: 0 10px;
+    margin: 0 15px;
+    color: #0af;
     text-decoration: none;
-    color: #00e6a8;
-    font-size: 16px;
-}
-
-nav a:hover {
-    color: white;
-}
-
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 10px;
-}
-
-h2 {
-    margin-top: 0;
-}
-
-section {
-    margin: 20px 0;
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #262626;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-footer {
-    margin-top: 30px;
-    text-align: center;
-    padding: 20px;
-    background: #1a1a1a;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-label {
-    font-size: 16px;
-}
-
-input, textarea, select {
-    padding: 10px;
-    background: #262626;
-    border: 1px solid #444;
-    border-radius: 8px;
-    color: white;
-}
-
-button {
-    background: #00e6a8;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
     font-weight: bold;
 }
 
-button:hover {
-    background: #00c797;
+nav a:hover {
+    color: #09f;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #111;
+}
+
+.btn {
+    display: inline-block;
+    background: #0af;
+    color: #000;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #09f;
+}
+
+.content {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid #333;
 }

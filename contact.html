@@ -1,60 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact - HealthHub</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment – Sky Laser Dentistry</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>HealthHub</h1>
+    <h1>Book an Appointment</h1>
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="doctors.html">Doctors</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Book Appointment</a>
     </nav>
 </header>
 
-<main>
-    <h2>Book an Appointment</h2>
-    <p>Fill the form below and we will get back to you.</p>
+<section class="content">
+    <p>Fill out the form below and we will contact you to confirm your appointment.</p>
 
-    <form action="success.html" method="GET">
-
-        <label>Name</label>
+    <form action="https://formspree.io/f/mzzbqgwn" method="POST" class="form">
+        <label>Your Name</label>
         <input type="text" name="name" required>
-
-        <label>Email</label>
-        <input type="email" name="email" required>
 
         <label>Phone Number</label>
         <input type="text" name="phone" required>
 
-        <label>Appointment Date</label>
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Preferred Date</label>
         <input type="date" name="date" required>
 
-        <label>Choose Department</label>
-        <select name="department" required>
-            <option>General Checkup</option>
-            <option>Cardiology</option>
-            <option>Pediatrics</option>
-            <option>Dermatology</option>
-            <option>Neurology</option>
+        <label>Select Service</label>
+        <select name="service">
+            <option>Teeth Cleaning</option>
+            <option>Teeth Whitening</option>
+            <option>Root Canal</option>
+            <option>Cavity Filling</option>
+            <option>Laser Gum Treatment</option>
         </select>
 
-        <label>Message / Reason</label>
-        <textarea name="message" rows="4"></textarea>
+        <label>Additional Notes</label>
+        <textarea name="message" rows="5"></textarea>
 
-        <button type="submit">Book Appointment</button>
+        <button type="submit" class="btn">Submit</button>
     </form>
-
-</main>
+</section>
 
 <footer>
-    © 2025 HealthHub
+    <p>© 2025 Sky Laser Dentistry</p>
 </footer>
 
 </body>
