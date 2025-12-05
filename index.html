@@ -1,56 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HealthXD - Your Digital Health Hub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HealthHub — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="header-retro">
-        <div class="logo-box">
-            <h1><a href="index.html">HealthXD</a></h1>
-        </div>
-        <nav class="nav-bar-retro">
-            <ul>
-                <li><a href="index.html" class="active-link">Home</a></li>
-                <li><a href="services.html">Services & Features</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="#">FAQs</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container-retro">
-        <aside class="sidebar-left">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#">Find a Doctor</a></li>
-                <li><a href="#">Symptom Checker</a></li>
-                <li><a href="#">Health Articles</a></li>
-            </ul>
-                    </aside>
-
-        <main class="main-content">
-            <h2 class="title-glow">Welcome to HealthXD!</h2>
-            <p>Your one-stop destination for reliable health information and tools, designed with the dynamic spirit of the early web! We focus on preventative care and making health data accessible.</p>
-            
-            <section class="hero-section">
-                <div class="hero-text">
-                    <h3>**Check out our latest Health Beat!**</h3>
-                    <p>Learn about the best new wellness trends.</p>
-                    <a href="#" class="button-8bit">Read More!</a>
-                </div>
-                <div class="hero-image">
-                    <img src="images/hero-image.jpg" alt="Dynamic image of a health infographic">
-                </div>
-            </section>
-        </main>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">HealthHub</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="toggle menu">☰</button>
     </div>
+  </header>
 
-    <footer class="footer-retro">
-        <p>&copy; 2025 HealthXD. All rights reserved. | <a href="#">Privacy Policy</a></p>
-    </footer>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Welcome to HealthHub</h1>
+          <p>Your trusted place for simple, clear healthcare information and local resources.</p>
+          <div class="hero-actions">
+            <a class="btn" href="services.html">Explore Services</a>
+            <a class="btn ghost" href="doctors.html">Find Doctors</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Quick Health Check</h3>
+          <ul>
+            <li>Symptoms guide</li>
+            <li>Appointment tips</li>
+            <li>Emergency contacts</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <h2>Features</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Local Clinics</h3>
+          <p>Browse clinics nearby with hours and contact details.</p>
+        </article>
+        <article class="card">
+          <h3>Services</h3>
+          <p>See a concise list of common healthcare services offered.</p>
+        </article>
+        <article class="card">
+          <h3>Trusted Doctors</h3>
+          <p>Profiles of doctors with specialization and brief bios.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="callout">
+      <div class="container">
+        <h2>Preparing for your visit</h2>
+        <p>Bring ID, list of medications, and note down questions for your doctor.</p>
+        <a class="btn" href="contact.html">Make a note</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>HealthHub</h4>
+        <p>Simple. Clear. Caring.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>email@healthhub.example</p>
+      </div>
+    </div>
+    <div class="copyright">© HealthHub 2025</div>
+  </footer>
+  <script>
+    const btn = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.nav');
+    btn.addEventListener('click', ()=> nav.classList.toggle('open'));
+  </script>
 </body>
 </html>

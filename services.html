@@ -1,27 +1,77 @@
-<main class="main-content">
-    <link rel="stylesheet" href="css/style.css">
-        <h2 class="title-glow">Services & Features</h2>
-        <p>HealthXD provides you with essential tools to manage and understand your health.</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HealthHub — Services</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">HealthHub</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="toggle menu">☰</button>
+    </div>
+  </header>
 
-        <div class="feature-box-container">
-            <div class="feature-box">
-                <img src="images/feature1.png" alt="Icon for Symptom Checker">
-                <h3>Symptom Checker v2.0</h3>
-                <p>Quickly input your symptoms and get a preliminary assessment. **Not a substitute for a doctor!**</p>
-                <a href="#" class="button-8bit">Try Now!</a>
-            </div>
-
-            <div class="feature-box">
-                <img src="images/feature2.png" alt="Icon for Wellness Tracker">
-                <h3>Wellness Tracker</h3>
-                <p>Log your daily steps, water intake, and sleep patterns to maintain peak condition.</p>
-                <a href="#" class="button-8bit">Login</a>
-            </div>
-            
-            <div class="feature-box">
-                <img src="images/feature3.png" alt="Icon for Virtual Consults">
-                <h3>Virtual Consults (Coming Soon!)</h3>
-                <p>Chat with a healthcare professional from the comfort of your home. Stay tuned!</p>
-            </div>
+  <main class="container">
+    <section class="page">
+      <h1>Services</h1>
+      <div class="grid services-grid">
+        <div class="service">
+          <h3>General Consultation</h3>
+          <p>Short explanation you can describe in viva: includes check-ups and basic diagnosis.</p>
         </div>
-    </main>
+        <div class="service">
+          <h3>Diagnostics</h3>
+          <p>Quick tests and labs with results summary page links.</p>
+        </div>
+        <div class="service">
+          <h3>Emergency Care</h3>
+          <p>What to do in emergencies and local emergency numbers.</p>
+        </div>
+        <div class="service">
+          <h3>Telehealth Tips</h3>
+          <p>How to prepare for online consultations and what details to share.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>HealthHub</h4>
+        <p>Simple. Clear. Caring.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>email@healthhub.example</p>
+      </div>
+    </div>
+    <div class="copyright">© HealthHub 2025</div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.nav');
+    btn.addEventListener('click', ()=> nav.classList.toggle('open'));
+  </script>
+</body>
+</html>

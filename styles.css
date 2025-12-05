@@ -1,0 +1,84 @@
+:root{
+  --bg:#050608;
+  --card:#0f1416;
+  --muted:#9aa3a6;
+  --accent:#0ea5a1;
+  --glass:rgba(255,255,255,0.03);
+  --radius:14px;
+  --gap:18px;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:#e6eef0;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:22px}
+.site-header{backdrop-filter:blur(6px);position:sticky;top:0;z-index:20;background:linear-gradient(180deg,transparent,rgba(255,255,255,0.02))}
+.header-inner{display:flex;align-items:center;gap:16px;justify-content:space-between}
+.brand{font-weight:700;font-size:20px;color:white;text-decoration:none}
+.nav{display:flex;gap:12px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav a:hover{color:#fff;background:var(--glass)}
+.cta{background:linear-gradient(90deg,var(--accent),#06b6d4);padding:8px 12px;border-radius:10px;color:#021012}
+.mobile-toggle{display:none;background:none;border:0;color:var(--muted);font-size:20px;padding:6px}
+
+/* hero */
+.hero{padding:44px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center}
+.hero h1{font-size:34px;margin:0 0 10px}
+.hero p{color:var(--muted);margin:0 0 18px}
+.hero-actions{display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;background:linear-gradient(90deg,var(--accent),#06b6d4);color:#021012;font-weight:600}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.05);color:#e6eef0}
+.hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+
+/* features */
+.features h2{margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:12px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.callout{background:linear-gradient(90deg,rgba(14,165,161,0.06),transparent);padding:28px 0;margin-top:26px;border-top:1px solid rgba(255,255,255,0.02)}
+
+/* services */
+.services-grid{grid-template-columns:repeat(2,1fr)}
+.service{background:var(--card);padding:16px;border-radius:12px}
+
+/* doctors */
+.doctors-grid{grid-template-columns:repeat(3,1fr)}
+.doctor{background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:18px;border-radius:12px;text-align:center}
+.avatar{width:72px;height:72px;border-radius:12px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#0ea5a1,#06b6d4);font-weight:700;color:#021012}
+
+/* faq */
+.faq details{background:var(--card);padding:12px;border-radius:8px;margin-bottom:10px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:22px}
+.contact-form{display:flex;flex-direction:column;gap:12px}
+.contact-form input,.contact-form textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px;color:#e6eef0}
+
+/* footer */
+.site-footer{margin-top:36px;border-top:1px solid rgba(255,255,255,0.02);padding:26px 0}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.site-footer a{color:var(--muted);text-decoration:none}
+copyright{opacity:0.7}
+
+/* responsiveness */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .doctors-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .nav{display:none}
+  .mobile-toggle{display:block}
+  .nav.open{display:flex;flex-direction:column;position:absolute;left:22px;right:22px;top:64px;background:rgba(5,6,8,0.95);padding:12px;border-radius:10px}
+  .grid{grid-template-columns:1fr}
+  .doctors-grid{grid-template-columns:1fr}
+}
