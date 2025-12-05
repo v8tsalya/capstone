@@ -204,18 +204,18 @@ footer {
         grid-template-columns: 1fr;
     }}
 
-/* Navigation Styling */
+
 header {
-    background: #35424a; /* Dark background */
-    color: #ffffff; /* White text */
+    background: #35424a; 
+    color: #ffffff; 
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #e8491d 3px solid; /* Accent color border */
+    border-bottom: #e8491d 3px solid; 
 }
 
 header a {
     color: #ffffff;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
 }
@@ -230,12 +230,6 @@ header nav {
     margin-top: 10px;
 }
 
-/* Optional: Utility class for centering content */
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
 
 #main-content {
     padding: 20px;
@@ -248,7 +242,7 @@ header nav {
     padding-bottom: 10px;
 }
 
-.project-item {
+.resource-item {
     background: #f4f4f4;
     padding: 20px;
     margin-bottom: 30px;
@@ -256,18 +250,18 @@ header nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.project-item h3 {
+.resource-item h3 {
     color: #e8491d;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
-.project-item p {
+.resource-item p {
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
-.project-item a {
+.resource-item a {
     display: inline-block;
     background: #35424a;
     color: #ffffff;
@@ -277,7 +271,7 @@ header nav {
     transition: background-color 0.3s ease;
 }
 
-.project-item a:hover {
+.resource-item a:hover {
     background: #e8491d;
 }
 
