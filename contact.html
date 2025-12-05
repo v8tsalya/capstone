@@ -1,72 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Hub - Contact</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-    <div class="container">
-        <h1><a href="index.html">HealthHub</a></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="resources.html">Resources</a></li> <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<main class="main-content">
+        <h2 class="title-glow">Contact the HealthXD Team</h2>
+        <p>Have a question or need support? Reach out to us!</p>
 
-    
+        <div class="contact-info">
+            <p>**Email:** <a href="mailto:support@healthxd.com">support@healthxd.com</a></p>
+            <p>**Phone:** 1-800-HEALTHXD</p>
+            <p>**Address:** Newton Tech Campus, SNW Lab</p>
+                    </div>
 
-    <main class="contact-main">
-        <h2>Request an Appointment or Inquiry</h2>
-        
-        <form action="#" method="POST" class="contact-form">
+        <form class="contact-form-retro" action="#" method="POST">
+            <h3>Send us a Message!</h3>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
             
-            <fieldset>
-                <legend>Your Details</legend>
-                <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="fullName" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="emailAddress" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone:</label>
-                    <input type="tel" id="phone" name="phoneNumber">
-                </div>
-            </fieldset>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-            <fieldset>
-                <legend>Inquiry Details</legend>
-                <div class="form-group">
-                    <label for="type">Inquiry Type:</label>
-                    <select id="type" name="inquiryType" required>
-                        <option value="appointment">Appointment Request</option>
-                        <option value="general">General Question</option>
-                        <option value="billing">Billing/Insurance</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="userMessage" rows="4"></textarea>
-                </div>
-            </fieldset>
-
-            <button type="submit" class="button submit-button">Submit Request</button>
+            <button type="submit" class="button-8bit">Send it!</button>
         </form>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Basic Health Hub. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
