@@ -19,12 +19,37 @@
 </header>
 
 <main>
-    <h2>Contact Us</h2>
+    <h2>Book an Appointment</h2>
+    <p>Fill the form below and we will get back to you.</p>
 
-    <section>
-        <p>Email: support@healthhub.com</p>
-        <p>Phone: +91 9876543210</p>
-    </section>
+    <form action="success.html" method="GET">
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="phone" required>
+
+        <label>Appointment Date</label>
+        <input type="date" name="date" required>
+
+        <label>Choose Department</label>
+        <select name="department" required>
+            <option>General Checkup</option>
+            <option>Cardiology</option>
+            <option>Pediatrics</option>
+            <option>Dermatology</option>
+            <option>Neurology</option>
+        </select>
+
+        <label>Message / Reason</label>
+        <textarea name="message" rows="4"></textarea>
+
+        <button type="submit">Book Appointment</button>
+    </form>
 
 </main>
 
