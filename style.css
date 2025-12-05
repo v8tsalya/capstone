@@ -5,23 +5,24 @@
 }
 
 :root {
-    --bg-color: #0D001F;
-    --primary-text: #F0F0FF;
-    --accent-pink: #FF039D;
-    --accent-blue: #00F0FF;
-    --card-border-glow: 0 0 15px var(--accent-pink), 0 0 25px var(--accent-blue);
+    --bg-color: #000000;
+    --neon-green: #39FF14;
+    --text-color: #DFFF00;
+    --link-color: #00FFC0;
+    --glow-light: 0 0 5px var(--neon-green), 0 0 15px var(--neon-green);
+    --glow-deep: 0 0 10px var(--neon-green), 0 0 30px #00FF00;
 }
 
 body {
     background-color: var(--bg-color);
-    color: var(--primary-text);
-    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
     line-height: 1.6;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
 }
 
 h1, h2, h3, a {
-    text-shadow: 0 0 5px var(--accent-pink);
+    text-shadow: none;
 }
 
 p {
@@ -36,21 +37,39 @@ p {
     padding: 0 10px;
 }
 
+/* NEW: Generic card style for all content sections that are not part of the grid */
+.info-card {
+    background: #0D0D0D;
+    padding: 30px;
+    margin: 30px 0; /* Adds spacing between the header/other cards */
+    border: 1px solid var(--neon-green);
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+}
+
+.info-card h2, .info-card h3 {
+    color: var(--neon-green);
+    border-bottom: 1px dashed var(--link-color);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+/* END NEW */
+
 header {
-    background: rgba(30, 0, 45, 0.8);
-    color: var(--primary-text);
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--text-color);
     padding: 20px 0;
-    border-bottom: 2px solid var(--accent-pink);
-    box-shadow: 0 0 20px var(--accent-blue);
+    border-bottom: 1px solid var(--neon-green);
+    box-shadow: 0 5px 20px var(--neon-green);
 }
 
 header h1 a {
     float: left;
-    color: var(--accent-pink);
+    color: var(--neon-green);
     text-decoration: none;
-    font-size: 24px;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px var(--accent-pink);
+    font-size: 28px;
+    letter-spacing: 5px;
+    text-shadow: none;
 }
 
 header nav {
@@ -60,96 +79,110 @@ header nav {
 
 header li {
     display: inline;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 header li a {
-    color: var(--primary-text);
+    color: var(--text-color);
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 header li a:hover {
-    color: var(--accent-blue);
-    text-shadow: 0 0 5px var(--accent-blue), 0 0 15px var(--accent-blue);
+    color: var(--neon-green);
+    text-shadow: none;
 }
 
 header li a.current {
     font-weight: bold;
-    color: var(--accent-blue);
+    color: var(--neon-green);
+    border-bottom: 1px solid var(--neon-green);
 }
 
 
 #main-content {
     padding: 40px 0;
+    display: grid; /* Enable CSS Grid for the main content layout */
+    grid-template-columns: 1fr; /* Default to single column on mobile */
+    gap: 30px; /* Spacing between grid items (boxes) */
+}
+
+/* Media query to switch to two columns on wider screens */
+@media (min-width: 768px) {
+    #main-content {
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns for resource items */
+    }
 }
 
 #main-content h2 {
-    color: var(--accent-pink);
-    margin-bottom: 30px;
-    border-bottom: 2px dashed var(--accent-blue);
-    padding-bottom: 15px;
-    text-shadow: 0 0 10px var(--accent-pink);
+    color: var(--neon-green);
+    margin-bottom: 0; /* Margin moved to the grid gap */
+    border-left: 5px solid var(--link-color);
+    padding-left: 15px;
+    padding-bottom: 5px;
+    text-shadow: none;
+    grid-column: 1 / -1; /* Make sure the section header spans all columns */
 }
 
 .resource-item {
-    background: rgba(30, 0, 45, 0.9);
+    background: #0D0D0D;
     padding: 25px;
-    margin-bottom: 40px;
-    border: 3px solid var(--accent-pink);
-    border-radius: 15px;
-    box-shadow: var(--card-border-glow);
+    margin-bottom: 0; /* Removed this margin as 'gap' handles spacing */
+    border: 1px solid var(--neon-green);
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
 }
 
 .resource-item h3 {
-    color: var(--accent-blue);
+    color: var(--link-color);
     margin-top: 0;
     margin-bottom: 15px;
-    text-shadow: 0 0 8px var(--accent-blue);
+    text-shadow: none;
 }
 
 .resource-item p {
-    color: var(--primary-text);
+    color: var(--text-color);
     margin-bottom: 15px;
     text-shadow: none;
 }
 
 .resource-item a {
     display: inline-block;
-    background: var(--accent-pink);
+    background: var(--neon-green);
     color: var(--bg-color);
-    padding: 10px 20px;
+    padding: 8px 16px;
     text-decoration: none;
-    border: 2px solid var(--accent-blue);
-    border-radius: 10px;
+    border: none;
+    border-radius: 2px;
     font-weight: bold;
-    box-shadow: 0 0 10px var(--accent-pink);
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 8px var(--neon-green);
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
     margin-top: 10px;
+    text-transform: uppercase;
     text-shadow: none;
 }
 
 .resource-item a:hover {
-    background: var(--accent-blue);
+    background: var(--link-color);
     color: var(--bg-color);
-    box-shadow: 0 0 15px var(--accent-blue), 0 0 30px var(--accent-pink);
+    box-shadow: 0 0 10px var(--link-color), 0 0 20px var(--link-color);
 }
 
 hr {
     border: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-pink) 0%, var(--accent-blue) 100%);
+    height: 1px;
+    background: var(--neon-green);
     margin: 40px 0;
-    box-shadow: 0 0 10px var(--accent-pink);
+    box-shadow: 0 0 10px var(--neon-green);
 }
 
 footer {
     padding: 20px;
-    color: var(--primary-text);
+    color: var(--text-color);
     background-color: var(--bg-color);
     text-align: center;
-    border-top: 2px solid var(--accent-blue);
+    border-top: 1px dashed var(--neon-green);
     position: fixed;
     bottom: 0;
     width: 100%;
