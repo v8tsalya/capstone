@@ -1,99 +1,560 @@
+/* BASIC SETTINGS */
 body {
     margin: 0;
-    padding: 0;
+    padding: 20px;
     background: #0d0d0d;
+    color: #fff;
     font-family: Arial, sans-serif;
-    color: white;
 }
+
+/* Use border-box to avoid element padding/margin causing overflow */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Typography adjustments for even text sizing */
+h1 { font-size: 28px; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 0 0 8px; }
+h3 { font-size: 18px; margin: 0 0 8px; }
+p { font-size: 15px; line-height: 1.5; color: #ddd; }
 
 header {
-    background: #1a1a1a;
     padding: 20px;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-nav {
-    margin-top: 10px;
+    background: #111;
+    border-bottom: 1px solid #333;
 }
 
 nav a {
-    margin: 0 10px;
+    color: #ddd;
+    margin: 0 12px;
     text-decoration: none;
-    color: #00e6a8;
-    font-size: 16px;
+    font-weight: bold;
 }
-
 nav a:hover {
-    color: white;
+    color: #fff;
 }
 
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
+/* HERO BOX */
+.hero-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #1a1a1a;
+    padding: 30px;
+    margin: 20px auto;
+    width: 85%;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.hero-box img {
+    width: 280px;
     border-radius: 10px;
 }
 
-h2 {
-    margin-top: 0;
+.hero-text {
+    max-width: 60%;
 }
 
-section {
-    margin: 20px 0;
+.hero-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #0ea5e9;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.hero-btn:hover {
+    background: #0284c7;
+}
+
+/* CARD GRID */
+.section-title {
+    width: 85%;
+    margin: 40px auto 10px;
 }
 
 .card-grid {
+    width: 85%;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
+/* CARDS */
 .card {
-    background: #262626;
-    padding: 15px;
+    background: #1d1d1d;
+    padding: 18px;
     border-radius: 10px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px; /* keep cards visually even */
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* TESTIMONIALS */
+.testimonial {
+    text-align: left;
+    font-style: italic;
 }
 
 footer {
-    margin-top: 30px;
     text-align: center;
     padding: 20px;
-    background: #1a1a1a;
+    margin-top: 40px;
+    color: #888;
 }
 
-form {
+/* --- ABOUT PAGE STYLES --- */
+
+.about-hero {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
-label {
-    font-size: 16px;
+.about-hero img {
+    width: 45%;
+    border-radius: 12px;
 }
 
-input, textarea, select {
-    padding: 10px;
-    background: #262626;
-    border: 1px solid #444;
-    border-radius: 8px;
-    color: white;
+.about-hero h2 {
+    margin-top: 0;
 }
 
-button {
-    background: #00e6a8;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+/* Info Cards */
+.info-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+/* Values Grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.value-box {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.value-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fade 1s forwards;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards;
+}
+
+.delay { animation-delay: 0.3s; }
+.delay2 { animation-delay: 0.6s; }
+
+@keyframes fade {
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Global Content Container for all sections --- */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Example: wrap `header`, `main`, and `footer` with `.content-wrapper` in HTML */
+
+main {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Contact page styles */
+.contact-hero { max-width: 900px; margin: 0 auto 18px; text-align: center; }
+.contact-hero .summary { color: #cfcfcf; margin-top:8px; }
+
+.contact-container { display: grid; grid-template-columns: 1fr 320px; gap: 18px; align-items: start; max-width: 1200px; width: 100%; margin: 0 auto; }
+.contact-form.card { padding: 20px; }
+.contact-panel.info-card { padding: 18px; }
+
+.form-row { margin-bottom: 12px; }
+.form-row label { display:block; margin-bottom:6px; color:#ddd; font-weight:700; font-size:0.95rem; }
+.form-control { width:100%; padding:10px 12px; border-radius:8px; border:1px solid #333; background:#0f0f0f; color:#fff; }
+.form-control:focus { outline: 3px solid rgba(14,165,233,0.18); outline-offset: 2px; }
+
+.two-cols { display:flex; gap:12px; }
+.two-cols .form-row { flex:1; }
+
+.form-actions { margin-top:14px; }
+.form-actions .btn { padding:10px 14px; font-weight:700; }
+
+@media (max-width: 880px) {
+    .contact-container { grid-template-columns: 1fr; width: 94%; }
+    .two-cols { flex-direction: column; }
+}
+
+.card .summary { margin-bottom: 8px; color: #ccc; }
+.card .details { margin-top: 8px; color: #ddd; }
+.card .actions { margin-top: 12px; display:flex; gap:8px; }
+.btn { background:#0ea5e9; color:#012; border:none; padding:8px 10px; border-radius:8px; cursor:pointer; text-decoration:none; }
+.btn.small { padding:6px 8px; font-size:0.95rem; }
+.btn.danger { background:#ef4444; color:#fff; }
+
+/* Modal */
+.modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(3,3,3,0.6); z-index: 60; }
+.modal[aria-hidden="false"] { display: flex; }
+.modal-content { background: #0f0f0f; padding: 18px; border-radius: 10px; max-width: 720px; width: 92%; border: 1px solid #333; color: #fff; }
+.modal-close { background: transparent; border: none; color: #fff; font-size: 22px; position: absolute; right: 18px; top: 18px; cursor: pointer; }
+.muted { color:#aaa; font-size:0.95rem; }
+
+/* Small responsive tweaks */
+@media (max-width: 720px) {
+    .about-hero { flex-direction: column; }
+    .hero-box { width: 100%; }
+}
+
+/* Small phones and very narrow screens */
+@media (max-width: 480px) {
+    body { padding: 12px; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 16px; }
+    .hero-box { flex-direction: column; padding: 18px; width: 100%; }
+    .hero-box img { width: 100%; max-width: 100%; height: auto; margin-top: 12px; }
+    .card-grid { gap: 12px; }
+    .card { min-height: auto; padding: 14px; }
+    .contact-container { width: 100%; grid-template-columns: 1fr; }
+    .form-control { padding: 8px 10px; }
+    .nav { word-break: break-word; }
+    nav a { display: inline-block; margin: 6px 8px; }
+}
+
+/* subtle card hover */
+.card { transition: transform 180ms ease, box-shadow 180ms ease; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
+
+/* End of stylesheet */
+
+/* Page loader styles */
+/* loader removed */
+
+/* BASIC SETTINGS */
+body {
+    margin: 0;
+    padding: 20px;
+    background: #0d0d0d;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Use border-box to avoid element padding/margin causing overflow */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Typography adjustments for even text sizing */
+h1 { font-size: 28px; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 0 0 8px; }
+h3 { font-size: 18px; margin: 0 0 8px; }
+p { font-size: 15px; line-height: 1.5; color: #ddd; }
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: #111;
+    border-bottom: 1px solid #333;
+}
+
+nav a {
+    color: #ddd;
+    margin: 0 12px;
+    text-decoration: none;
     font-weight: bold;
 }
+nav a:hover {
+    color: #fff;
+}
 
-button:hover {
-    background: #00c797;
+/* HERO BOX */
+.hero-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 30px;
+    margin: 20px auto;
+    width: 85%;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.hero-box img {
+    width: 280px;
+    border-radius: 10px;
+}
+
+.hero-text {
+    max-width: 60%;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #0ea5e9;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.hero-btn:hover {
+    background: #0284c7;
+}
+
+/* CARD GRID */
+.section-title {
+    width: 85%;
+    margin: 40px auto 10px;
+}
+
+.card-grid {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* CARDS */
+.card {
+    background: #1d1d1d;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px; /* keep cards visually even */
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* TESTIMONIALS */
+.testimonial {
+    text-align: left;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #888;
+}
+
+/* --- ABOUT PAGE STYLES --- */
+
+.about-hero {
+    display: flex;
+    gap: 20px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.about-hero img {
+    width: 45%;
+    border-radius: 12px;
+}
+
+.about-hero h2 {
+    margin-top: 0;
+}
+
+/* Info Cards */
+.info-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+/* Values Grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.value-box {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.value-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fade 1s forwards;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards;
+}
+
+.delay { animation-delay: 0.3s; }
+.delay2 { animation-delay: 0.6s; }
+
+@keyframes fade {
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Global Content Container for all sections --- */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Example: wrap `header`, `main`, and `footer` with `.content-wrapper` in HTML */
+
+main {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Contact page styles */
+.contact-hero { max-width: 900px; margin: 0 auto 18px; text-align: center; }
+.contact-hero .summary { color: #cfcfcf; margin-top:8px; }
+
+.contact-container { display: grid; grid-template-columns: 1fr 320px; gap: 18px; align-items: start; max-width: 1200px; width: 100%; margin: 0 auto; }
+.contact-form.card { padding: 20px; }
+.contact-panel.info-card { padding: 18px; }
+
+.form-row { margin-bottom: 12px; }
+.form-row label { display:block; margin-bottom:6px; color:#ddd; font-weight:700; font-size:0.95rem; }
+.form-control { width:100%; padding:10px 12px; border-radius:8px; border:1px solid #333; background:#0f0f0f; color:#fff; }
+.form-control:focus { outline: 3px solid rgba(14,165,233,0.18); outline-offset: 2px; }
+
+.two-cols { display:flex; gap:12px; }
+.two-cols .form-row { flex:1; }
+
+.form-actions { margin-top:14px; }
+.form-actions .btn { padding:10px 14px; font-weight:700; }
+
+@media (max-width: 880px) {
+    .contact-container { grid-template-columns: 1fr; width: 94%; }
+    .two-cols { flex-direction: column; }
+}
+
+.card .summary { margin-bottom: 8px; color: #ccc; }
+.card .details { margin-top: 8px; color: #ddd; }
+.card .actions { margin-top: 12px; display:flex; gap:8px; }
+.btn { background:#0ea5e9; color:#012; border:none; padding:8px 10px; border-radius:8px; cursor:pointer; text-decoration:none; }
+.btn.small { padding:6px 8px; font-size:0.95rem; }
+.btn.danger { background:#ef4444; color:#fff; }
+
+/* Modal */
+.modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(3,3,3,0.6); z-index: 60; }
+.modal[aria-hidden="false"] { display: flex; }
+.modal-content { background: #0f0f0f; padding: 18px; border-radius: 10px; max-width: 720px; width: 92%; border: 1px solid #333; color: #fff; }
+.modal-close { background: transparent; border: none; color: #fff; font-size: 22px; position: absolute; right: 18px; top: 18px; cursor: pointer; }
+.muted { color:#aaa; font-size:0.95rem; }
+
+/* Small responsive tweaks */
+@media (max-width: 720px) {
+    .about-hero { flex-direction: column; }
+    .hero-box { width: 100%; }
+}
+
+/* subtle card hover */
+.card { transition: transform 180ms ease, box-shadow 180ms ease; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
+
+/* --- Global Content Container for all sections --- */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* You would then need to wrap all content inside the header, main, and footer with this new div: */
+
+<header>
+    <div class="content-wrapper">
+        ... header content ...
+    </div>
+</header>
+<main>
+    <div class="content-wrapper">
+        ... main content ...
+    </div>
+</main>
+<footer>
+    <div class="content-wrapper">
+        ... footer content ...
+    </div>
+</footer>
+
+
+main {
+    
+    max-width: 1200px; 
+    
+   
+    
+    
+    padding: 0 20px; 
 }

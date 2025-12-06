@@ -13,43 +13,81 @@
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="doctors.html">Doctors</a>
-        <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
 <main>
-    <h2>Book an Appointment</h2>
-    <p>Fill the form below and we will get back to you.</p>
+    <section class="contact-hero">
+        <h2>Book an Appointment</h2>
+        <p class="summary">Fill the quick form and we'll follow up to confirm your slot. For urgent issues, call your local emergency number immediately.</p>
+    </section>
 
-    <form action="success.html" method="GET">
+    <div class="contact-container">
+        <form id="bookingForm" class="contact-form card" action="success.html" method="GET" novalidate>
+            <div class="form-row">
+                <label for="name">Name</label>
+                <input id="name" class="form-control" type="text" name="name" required>
+            </div>
 
-        <label>Name</label>
-        <input type="text" name="name" required>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" class="form-control" type="email" name="email" required>
+            </div>
 
-        <label>Email</label>
-        <input type="email" name="email" required>
+            <div class="form-row">
+                <label for="phone">Phone Number</label>
+                <input id="phone" class="form-control" type="tel" name="phone" required>
+            </div>
 
-        <label>Phone Number</label>
-        <input type="text" name="phone" required>
+            <div class="two-cols">
+                <div class="form-row">
+                    <label for="date">Preferred Date</label>
+                    <input id="date" class="form-control" type="date" name="date">
+                </div>
 
-        <label>Appointment Date</label>
-        <input type="date" name="date" required>
+                <div class="form-row">
+                    <label for="department">Department</label>
+                    <select id="department" class="form-control" name="department">
+                        <option>General Checkup</option>
+                        <option>Cardiology</option>
+                        <option>Pediatrics</option>
+                        <option>Dermatology</option>
+                        <option>Neurology</option>
+                    </select>
+                </div>
+            </div>
 
-        <label>Choose Department</label>
-        <select name="department" required>
-            <option>General Checkup</option>
-            <option>Cardiology</option>
-            <option>Pediatrics</option>
-            <option>Dermatology</option>
-            <option>Neurology</option>
-        </select>
+            <div class="form-row">
+                <label for="message">Message / Reason</label>
+                <textarea id="message" class="form-control" name="message" rows="4"></textarea>
+            </div>
 
-        <label>Message / Reason</label>
-        <textarea name="message" rows="4"></textarea>
+            <div class="form-actions">
+                <button class="btn" type="submit">Book Appointment</button>
+            </div>
+        </form>
 
-        <button type="submit">Book Appointment</button>
-    </form>
+        <aside class="contact-panel info-card">
+            <h3>Contact & Hours</h3>
+            <p class="muted">Phone: +1 (555) 123-4567</p>
+            <p class="muted">Email: hello@healthhub.example</p>
+
+            <h4 style="margin-top:12px;">Clinic Hours</h4>
+            <p class="muted">Mon–Fri: 9:00 — 17:00</p>
+            <p class="muted">Saturday: 10:00 — 14:00</p>
+
+            <h4 style="margin-top:12px;">Visiting</h4>
+            <p class="details">Address: 123 Wellness Ave, Suite 4</p>
+
+            <div style="margin-top:14px;">
+                <a class="btn" href="doctors.html">See Doctors</a>
+                <a class="btn" href="index.html" style="margin-left:8px;">Home</a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- loader removed as requested -->
 
 </main>
 

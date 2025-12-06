@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Services - HealthHub</title>
+    <title>Services - HealthHub: Your Health Toolkit</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,38 +11,147 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <a href="services.html" class="active">Services </a>
         <a href="doctors.html">Doctors</a>
-        <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
 <main>
-    <h2>Our Services</h2>
-
-    <section class="card-grid">
-        <div class="card">
-            <h3>Basic Health Tips</h3>
-            <p>Daily health improvement advice.</p>
-        </div>
-
-        <div class="card">
-            <h3>Emergency Info</h3>
-            <p>What to do in common emergencies.</p>
-        </div>
-
-        <div class="card">
-            <h3>Find Doctors</h3>
-            <p>Explore medical specialists.</p>
-        </div>
+    <section class="service-intro bounce-in">
+        <h2>Your Simple Health Toolkit</h2>
+        <p>
+            Dive into our set of easy-to-use tools designed to help you navigate your health journey.
+            Use the cards below to browse our concise guides and resources.
+        </p>
     </section>
+
+    <div class="divider-line"></div>
+
+    <section class="card-grid" id="servicesGrid">
+
+        <article class="card">
+            <span class="card-badge fun-accent">Daily</span>
+            <h3>The Daily Well-Being Guide</h3>
+            <p class="summary">Short, doable daily habits to feel better — energy, sleep and mood friendly tips.</p>
+            <ul class="details">
+                <li>3-minute morning breathing routine</li>
+                <li>Hydration: one glass after waking</li>
+                <li>Micro-exercises — quick stretches to reset posture</li>
+            </ul>
+            <div class="actions">
+                <button class="btn small" data-action="tip">Get Tip</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <span class="card-badge urgency-accent">Quick Action!</span>
+            <h3>"Oh No!" Quick Help Guide</h3>
+            <p class="summary">Clear, simple instructions for common injuries or sudden symptoms. Stay calm.</p>
+            <p class="details">Includes: fainting, minor burns, choking, sprains, and when to call emergency services.</p>
+            <div class="actions">
+                <button class="btn danger" data-action="open-modal" data-modal="emergencyModal">See Emergency Steps</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <span class="card-badge pro-accent">Experts</span>
+            <h3>Find Your Health Hero</h3>
+            <p class="summary">Explore trusted medical specialists and doctors near you.</p>
+            <p class="details">Filter by specialty, location, and ratings. Book appointments or call clinics directly.</p>
+            <div class="actions">
+                <a class="btn" href="doctors.html">Search Doctors</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <span class="card-badge tip-accent">Diet</span>
+            <h3>Quick Nutrition Basics</h3>
+            <p class="summary">Simple food swaps and snack ideas to keep your energy steady.</p>
+            <ul class="details">
+                <li>Swap refined carbs for whole grains</li>
+                <li>Easy balanced snack: protein + fruit</li>
+            </ul>
+            <div class="actions">
+                <a class="btn" href="#">More Nutrition</a>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="fun-cta">
+        <p>Got a question that can't wait? Get in touch with us!</p>
+        <a href="contact.html" class="cta-button wobbly-on-hover">Contact Us</a>
+    </section>
+
+    <!-- Emergency modal -->
+    <div id="emergencyModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="emergencyTitle">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">×</button>
+            <h3 id="emergencyTitle">Emergency Steps — Quick Actions</h3>
+            <ul>
+                <li><strong>Choking:</strong> Ask if they can cough. If not, perform back blows and abdominal thrusts (if trained) — call emergency services immediately.</li>
+                <li><strong>Severe bleeding:</strong> Apply firm pressure; elevate if possible; call emergency services.</li>
+                <li><strong>Unconscious:</strong> Check breathing, start CPR if needed and trained; call emergency services.</li>
+            </ul>
+            <p class="muted">This guide is for quick reference only — always call local emergency services in life-threatening situations.</p>
+        </div>
+    </div>
+
 
 </main>
 
+<script>
+// Simplified controller: tips and emergency modal only
+(() => {
+    const grid = document.getElementById('servicesGrid');
+
+    grid && grid.addEventListener('click', (e)=>{
+        // tip button
+        const tipBtn = e.target.closest('[data-action="tip"]');
+        if (tipBtn) {
+            const tips = [
+                'Take 3 deep breaths when stressed.',
+                'Drink a glass of water right now.',
+                'Stand and stretch for 2 minutes every hour.',
+                'Add a serving of vegetables to one meal today.'
+            ];
+            const pick = tips[Math.floor(Math.random()*tips.length)];
+            alert('Daily Tip: ' + pick);
+            return;
+        }
+
+        // open modal
+        const modalBtn = e.target.closest('[data-action="open-modal"]');
+        if (modalBtn) {
+            const id = modalBtn.dataset.modal;
+            const modal = document.getElementById(id);
+            if (modal) modal.setAttribute('aria-hidden','false');
+        }
+    });
+
+    // modal close (overlay or close button)
+    document.addEventListener('click', (e)=>{
+        if (e.target.classList && (e.target.classList.contains('modal-close') || e.target.classList.contains('modal'))) {
+            const modal = e.target.closest('.modal');
+            modal && modal.setAttribute('aria-hidden','true');
+        }
+    });
+
+    // ESC closes any open modal
+    document.addEventListener('keydown', (e)=>{
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal[aria-hidden="false"]').forEach(m=>m.setAttribute('aria-hidden','true'));
+        }
+    });
+
+})();
+</script>
+
 <footer>
-    © 2025 HealthHub
+    © 2025 HealthHub | Simple Health, Happy You.
 </footer>
 
 </body>
 </html>
+
